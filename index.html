@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connors Emporium | Premium Services & Custom Goods</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">Connors Emporium</div>
+        <nav>
+            <a href="#fitness">Fitness & Dieting</a>
+            <a href="#finance">Finance & Budgeting</a>
+            <a href="#printing">3D Printing</a>
+            <a href="#jerky">Artisanal Jerky</a>
+        </nav>
+    </header>
+
+    <!-- Hero / Intro Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Connors Emporium</h1>
+            <p>High-performance coaching, precise engineering, and custom-crafted goods—all tailored specifically to your goals.</p>
+            <div class="cta-buttons">
+                <a href="#fitness" class="btn">Get Fit</a>
+                <a href="#printing" class="btn">Print Custom Designs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. Fitness & Dieting Section (Red & Black) -->
+    <section id="fitness" class="section section-fitness">
+        <div class="container">
+            <h2>Weightlifting Coaching & Custom Diet Plans</h2>
+            <p class="section-subtitle">Take control of your physique with a data-driven training regimen and macro optimization strategy built entirely around your lifestyle.</p>
+            
+            <form class="order-form" onsubmit="sendEmail(event, 'fitness')">
+                <div class="form-group">
+                    <label for="fit-name">Full Name</label>
+                    <input type="text" id="fit-name" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fit-height">Height</label>
+                        <input type="text" id="fit-height" placeholder="e.g., 6'0&quot;" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fit-weight">Current Weight (lbs)</label>
+                        <input type="number" id="fit-weight" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="fit-goals">Fitness & Physique Goals</label>
+                    <textarea id="fit-goals" rows="3" placeholder="Tell me what you want to achieve (e.g., strength, fat loss, muscle gain)..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="fit-activity">Daily Activity Level / Job Type</label>
+                    <select id="fit-activity" required>
+                        <option value="">Select activity level</option>
+                        <option value="Sedentary">Sedentary (Desk job)</option>
+                        <option value="Lightly Active">Lightly Active (Light exercise/walking)</option>
+                        <option value="Moderately Active">Moderately Active (Dynamic work / regular training)</option>
+                        <option value="Very Active">Very Active (Heavy physical labor / intense training)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fit-injuries">Injuries or Dietary Restrictions (Optional)</label>
+                    <textarea id="fit-injuries" rows="2" placeholder="List any physical limitations or foods to avoid..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-submit">Request Intake Consultation</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 2. Finance & Budgeting Section (Green & White) -->
+    <section id="finance" class="section section-finance">
+        <div class="container">
+            <h2>1-on-1 Personal Budgeting & Wealth Planning</h2>
+            <p class="section-subtitle">Take command of your financial future. Get customized 1-on-1 consulting alongside a personalized tracking spreadsheet designed to optimize your savings and investment strategies.</p>
+            
+            <form class="order-form" onsubmit="sendEmail(event, 'finance')">
+                <div class="form-group">
+                    <label for="fin-name">Full Name</label>
+                    <input type="text" id="fin-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="fin-focus">Primary Financial Objective</label>
+                    <select id="fin-focus" required>
+                        <option value="">Select main objective</option>
+                        <option value="Budgeting & Expense Tracking">Building a Functional Budget & Expense Tracking</option>
+                        <option value="Debt Paydown Strategy">Aggressive Debt Paydown Strategy</option>
+                        <option value="Long-term Investing Setup">Long-term Investment & Portfolio Allocation Foundations</option>
+                        <option value="Comprehensive Consultation">All of the above (Full Consultation)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fin-details">Current Situation Summary</label>
+                    <textarea id="fin-details" rows="4" placeholder="Briefly detail what you hope to get out of our sessions..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-submit">Book Financial Consultation</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 3. 3D Printing Section (Blue & White) -->
+    <section id="printing" class="section section-printing">
+        <div class="container">
+            <h2>Custom 3D Printing & Design Engineering</h2>
+            <p class="section-subtitle">From industrial prototyping to functional custom solutions, bring your ideas to life with high-accuracy geometric printing.</p>
+            
+            <!-- Portfolio Grid Showcase -->
+            <h3 class="showcase-title">Previous Project Showcase</h3>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="photo-placeholder"><span>[ Print Example 1 Photo ]</span></div>
+                    <h4>Functional Mechanisms</h4>
+                </div>
+                <div class="portfolio-item">
+                    <div class="photo-placeholder"><span>[ Print Example 2 Photo ]</span></div>
+                    <h4>Custom Brackets & Racks</h4>
+                </div>
+                <div class="portfolio-item">
+                    <div class="photo-placeholder"><span>[ Print Example 3 Photo ]</span></div>
+                    <h4>Prototyping & Enclosures</h4>
+                </div>
+            </div>
+
+            <!-- 3D Print Order Form -->
+            <form class="order-form" onsubmit="sendEmail(event, 'printing')">
+                <div class="form-group">
+                    <label for="print-name">Full Name</label>
+                    <input type="text" id="print-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="print-desc">Design & Creation Specifications</label>
+                    <textarea id="print-desc" rows="4" placeholder="Describe the object you want designed or created. Include estimated dimensions and practical use case..." required></textarea>
+                </div>
+                <div class="form-group file-notice-box">
+                    <label>Do you have an existing design file (.STL or .OBJ)?</label>
+                    <p class="notice-text">💡 *Note: Because this goes directly to email, please specify a link to your file (e.g., Google Drive / Dropbox link) in the description text field below, or attach the file directly to the email draft that opens when you click submit.*</p>
+                </div>
+                <button type="submit" class="btn btn-submit">Submit Design Blueprint Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 4. Artisanal Beef Jerky Section (Brownish/Tan) -->
+    <section id="jerky" class="section section-jerky">
+        <div class="container">
+            <h2>Small-Batch Custom Beef Jerky</h2>
+            <p class="section-subtitle">Premium cut, hand-sliced beef jerky marinaded and dried to perfect texture. Shipped directly to you in air-sealed, heavy-duty Ziploc bags to preserve maximum freshness.</p>
+            
+            <form class="order-form" onsubmit="sendEmail(event, 'jerky')">
+                <div class="form-group">
+                    <label for="jerk-name">Full Name</label>
+                    <input type="text" id="jerk-name" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="jerk-size">Bag Size Choice</label>
+                        <select id="jerk-size" required>
+                            <option value="">Select Package Size</option>
+                            <option value="12 oz Bag">12 oz Fresh-Seal Bag</option>
+                            <option value="24 oz Bag">24 oz Fresh-Seal Bag</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="jerk-flavor">Flavor Profile</label>
+                        <select id="jerk-flavor" required>
+                            <option value="">Select Flavor</option>
+                            <option value="Regular Original">Regular Original Savory</option>
+                            <option value="Sweet n Spicy">Sweet n Spicy Signature</option>
+                            <option value="Rotating Custom Flavor (Market Price)">Rotating Custom Flavor (Market Price)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="jerk-quantity">Quantity (Number of Bags)</label>
+                    <input type="number" id="jerk-quantity" min="1" value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="jerk-notes">Special Instructions / Custom Adjustments</label>
+                    <textarea id="jerk-notes" rows="2" placeholder="Any specific delivery instructions or preferences..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-submit">Place Custom Jerky Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Connors Emporium. All rights reserved. Crafted for peak efficiency.</p>
+    </footer>
+
+    <!-- Form Processing Script Linking Directly to your Email -->
+    <script>
+        function sendEmail(event, type) {
+            event.preventDefault();
+            const destinationEmail = "cdawg4252@gmail.com";
+            let subject = "";
+            let body = "";
+
+            if (type === 'fitness') {
+                const name = document.getElementById('fit-name').value;
+                const height = document.getElementById('fit-height').value;
+                const weight = document.getElementById('fit-weight').value;
+                const goals = document.getElementById('fit-goals').value;
+                const activity = document.getElementById('fit-activity').value;
+                const injuries = document.getElementById('fit-injuries').value;
+
+                subject = `Connors Emporium: Fitness Consulting Request - ${name}`;
+                body = `New Intake Request Form:\n\n` +
+                       `Name: ${name}\n` +
+                       `Height: ${height}\n` +
+                       `Weight: ${weight} lbs\n` +
+                       `Activity Level: ${activity}\n\n` +
+                       `Goals:\n${goals}\n\n` +
+                       `Injuries/Dietary Notes:\n${injuries}`;
+
+            } else if (type === 'finance') {
+                const name = document.getElementById('fin-name').value;
+                const focus = document.getElementById('fin-focus').value;
+                const details = document.getElementById('fin-details').value;
+
+                subject = `Connors Emporium: Budget Consultation Request - ${name}`;
+                body = `New Financial Coaching Form:\n\n` +
+                       `Name: ${name}\n` +
+                       `Focus Objective: ${focus}\n\n` +
+                       `Situation Details:\n${details}`;
+
+            } else if (type === 'printing') {
+                const name = document.getElementById('print-name').value;
+                const desc = document.getElementById('print-desc').value;
+
+                subject = `Connors Emporium: Custom 3D Print Quote - ${name}`;
+                body = `New 3D Print Design Request:\n\n` +
+                       `Name: ${name}\n\n` +
+                       `Design Blueprint & Creation Specifications:\n${desc}`;
+
+            } else if (type === 'jerky') {
+                const name = document.getElementById('jerk-name').value;
+                const size = document.getElementById('jerk-size').value;
+                const flavor = document.getElementById('jerk-flavor').value;
+                const qty = document.getElementById('jerk-quantity').value;
+                const notes = document.getElementById('jerk-notes').value;
+
+                subject = `Connors Emporium: Custom Jerky Order - ${name}`;
+                body = `New Jerky Order Sheet:\n\n` +
+                       `Name: ${name}\n` +
+                       `Size Select: ${size}\n` +
+                       `Flavor Select: ${flavor}\n` +
+                       `Quantity: ${qty} package(s)\n\n` +
+                       `Customization Notes:\n${notes}`;
+            }
+
+            // Construct client-side mailto URL and open user's local client
+            window.location.href = `mailto:${destinationEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+    </script>
+</body>
+</html>
