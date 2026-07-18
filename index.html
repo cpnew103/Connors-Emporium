@@ -228,53 +228,7 @@
            SECTION STYLING (CUSTOM THEMES & REVERSED COLOR SCHEMES)
            ==================================================== */
 
-        /* 1. Weightlifting (Crimson Dark Theme Reversed) */
-        .section-fitness {
-            background-color: #3b0c0c;
-            color: #ffffff;
-            border-top: 4px solid #ef4444;
-        }
-        .section-fitness h2 { color: #ef4444; }
-        .section-fitness .section-subtitle { color: #fca5a5; }
-        .section-fitness label { color: #fca5a5; }
-        .section-fitness .order-form { background-color: #2b0808; }
-        .section-fitness input, .section-fitness select, .section-fitness textarea {
-            background-color: #1f0505;
-            color: #ffffff;
-            border: 1px solid #7f1d1d;
-        }
-        .section-fitness .btn-submit { background-color: #ef4444; color: #ffffff; }
-        .section-fitness .btn-submit:hover { background-color: #dc2626; }
-        .section-fitness .photo-frame {
-            background-color: #2b0808;
-            border: 2px dashed #ef4444;
-            color: #fca5a5;
-        }
-
-        /* 2. Budgeting (Forest Green Dark Theme Reversed) */
-        .section-finance {
-            background-color: #11381b;
-            color: #ffffff;
-            border-top: 4px solid #22c55e;
-        }
-        .section-finance h2 { color: #22c55e; }
-        .section-finance .section-subtitle { color: #bbf7d0; }
-        .section-finance label { color: #bbf7d0; }
-        .section-finance .order-form { background-color: #0b2913; }
-        .section-finance input, .section-finance select, .section-finance textarea {
-            background-color: #061c0b;
-            color: #ffffff;
-            border: 1px solid #14532d;
-        }
-        .section-finance .btn-submit { background-color: #22c55e; color: #11381b; }
-        .section-finance .btn-submit:hover { background-color: #4ade80; }
-        .section-finance .photo-frame {
-            background-color: #0b2913;
-            border: 2px dashed #22c55e;
-            color: #bbf7d0;
-        }
-
-        /* 3. 3D Printing (Deep Royal Blue Dark Theme Reversed) */
+        /* 1. 3D Printing (Deep Royal Blue Dark Theme Reversed) - NOW FIRST */
         .section-printing {
             background-color: #0f1e3d;
             color: #ffffff;
@@ -306,6 +260,52 @@
             font-size: 0.88rem;
             color: #bfdbfe;
             line-height: 1.4;
+        }
+
+        /* 2. Weightlifting (Crimson Dark Theme Reversed) */
+        .section-fitness {
+            background-color: #3b0c0c;
+            color: #ffffff;
+            border-top: 4px solid #ef4444;
+        }
+        .section-fitness h2 { color: #ef4444; }
+        .section-fitness .section-subtitle { color: #fca5a5; }
+        .section-fitness label { color: #fca5a5; }
+        .section-fitness .order-form { background-color: #2b0808; }
+        .section-fitness input, .section-fitness select, .section-fitness textarea {
+            background-color: #1f0505;
+            color: #ffffff;
+            border: 1px solid #7f1d1d;
+        }
+        .section-fitness .btn-submit { background-color: #ef4444; color: #ffffff; }
+        .section-fitness .btn-submit:hover { background-color: #dc2626; }
+        .section-fitness .photo-frame {
+            background-color: #2b0808;
+            border: 2px dashed #ef4444;
+            color: #fca5a5;
+        }
+
+        /* 3. Budgeting (Forest Green Dark Theme Reversed) */
+        .section-finance {
+            background-color: #11381b;
+            color: #ffffff;
+            border-top: 4px solid #22c55e;
+        }
+        .section-finance h2 { color: #22c55e; }
+        .section-finance .section-subtitle { color: #bbf7d0; }
+        .section-finance label { color: #bbf7d0; }
+        .section-finance .order-form { background-color: #0b2913; }
+        .section-finance input, .section-finance select, .section-finance textarea {
+            background-color: #061c0b;
+            color: #ffffff;
+            border: 1px solid #14532d;
+        }
+        .section-finance .btn-submit { background-color: #22c55e; color: #11381b; }
+        .section-finance .btn-submit:hover { background-color: #4ade80; }
+        .section-finance .photo-frame {
+            background-color: #0b2913;
+            border: 2px dashed #22c55e;
+            color: #bbf7d0;
         }
 
         /* 4. Lacrosse (Millersville Gold & Black Theme) */
@@ -396,9 +396,9 @@
     <header class="navbar">
         <div class="logo">Connor's Emporium</div>
         <nav>
+            <a href="#printing">3D Printing</a>
             <a href="#fitness">Fitness</a>
             <a href="#finance">Finance</a>
-            <a href="#printing">3D Printing</a>
             <a href="#lacrosse">Lacrosse</a>
             <a href="#jerky">Jerky</a>
         </nav>
@@ -408,18 +408,59 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Welcome to Connor's Emporium</h1>
-            <p>High-performance coaching, precise engineering, strategic wealth planning, and custom-crafted goods—all tailored specifically to your goals.</p>
+            <p>Precise engineering, high-performance coaching, strategic wealth planning, and custom-crafted goods—all tailored specifically to your goals.</p>
             <div class="cta-buttons">
+                <a href="#printing" class="btn">3D Printing</a>
                 <a href="#fitness" class="btn">Get Fit</a>
                 <a href="#finance" class="btn">Manage Finance</a>
-                <a href="#printing" class="btn">3D Printing</a>
                 <a href="#lacrosse" class="btn">Lacrosse Coaching</a>
                 <a href="#jerky" class="btn">Order Jerky</a>
             </div>
         </div>
     </section>
 
-    <!-- 1. Fitness & Dieting Section (Crimson Dark Reversed) -->
+    <!-- 1. 3D Printing Section (Deep Royal Blue Dark Reversed) - NOW AT THE TOP -->
+    <section id="printing" class="section section-printing">
+        <div class="container">
+            <h2>Custom 3D Printing & Design Engineering</h2>
+            <p class="section-subtitle">From industrial prototyping to functional custom solutions, bring your ideas to life with high-accuracy geometric printing.</p>
+            
+            <!-- Portfolio Grid Showcase -->
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="photo-frame"><span>[ Drop Large Print Photo ]</span></div>
+                    <h4>Large projects</h4>
+                </div>
+                <div class="portfolio-item">
+                    <div class="photo-frame"><span>[ Drop Custom Print Photo ]</span></div>
+                    <h4>custom Projects</h4>
+                </div>
+                <div class="portfolio-item">
+                    <div class="photo-frame"><span>[ Drop Complex Model Photo ]</span></div>
+                    <h4>anything printable</h4>
+                </div>
+            </div>
+
+            <!-- 3D Print Order Form -->
+            <form class="order-form" onsubmit="sendEmail(event, 'printing')">
+                <div class="form-group">
+                    <label for="print-name">Full Name</label>
+                    <input type="text" id="print-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="print-desc">Design & Creation Specifications</label>
+                    <textarea id="print-desc" rows="4" placeholder="Describe the object you want designed or created. Include estimated dimensions and practical use case..." required></textarea>
+                </div>
+                <div class="form-group file-notice-box">
+                    <label>Do you have an existing design file (.STL or .OBJ)?</label>
+                    <p class="notice-text">💡 *Note: Please provide a link to your file (e.g. Google Drive or Dropbox link) directly inside the description field above, or attach the file to the email draft that opens when you submit.*</p>
+                </div>
+                <button type="submit" class="btn btn-submit">Submit Design Blueprint Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 2. Fitness & Dieting Section (Crimson Dark Reversed) -->
     <section id="fitness" class="section section-fitness">
         <div class="container">
             <h2>Weightlifting Coaching & Custom Diet Plans</h2>
@@ -470,7 +511,7 @@
         </div>
     </section>
 
-    <!-- 2. Finance & Budgeting Section (Forest Green Dark Reversed) -->
+    <!-- 3. Finance & Budgeting Section (Forest Green Dark Reversed) -->
     <section id="finance" class="section section-finance">
         <div class="container">
             <h2>1-on-1 Personal Budgeting & Wealth Planning</h2>
@@ -503,47 +544,6 @@
                     <textarea id="fin-details" rows="4" placeholder="Briefly detail what you hope to get out of our sessions..." required></textarea>
                 </div>
                 <button type="submit" class="btn btn-submit">Book Financial Consultation</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- 3. 3D Printing Section (Deep Royal Blue Dark Reversed) -->
-    <section id="printing" class="section section-printing">
-        <div class="container">
-            <h2>Custom 3D Printing & Design Engineering</h2>
-            <p class="section-subtitle">From industrial prototyping to functional custom solutions, bring your ideas to life with high-accuracy geometric printing.</p>
-            
-            <!-- Portfolio Grid Showcase -->
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="photo-frame"><span>[ Drop Large Print Photo ]</span></div>
-                    <h4>Large projects</h4>
-                </div>
-                <div class="portfolio-item">
-                    <div class="photo-frame"><span>[ Drop Custom Print Photo ]</span></div>
-                    <h4>custom Projects</h4>
-                </div>
-                <div class="portfolio-item">
-                    <div class="photo-frame"><span>[ Drop Complex Model Photo ]</span></div>
-                    <h4>anything printable</h4>
-                </div>
-            </div>
-
-            <!-- 3D Print Order Form -->
-            <form class="order-form" onsubmit="sendEmail(event, 'printing')">
-                <div class="form-group">
-                    <label for="print-name">Full Name</label>
-                    <input type="text" id="print-name" required>
-                </div>
-                <div class="form-group">
-                    <label for="print-desc">Design & Creation Specifications</label>
-                    <textarea id="print-desc" rows="4" placeholder="Describe the object you want designed or created. Include estimated dimensions and practical use case..." required></textarea>
-                </div>
-                <div class="form-group file-notice-box">
-                    <label>Do you have an existing design file (.STL or .OBJ)?</label>
-                    <p class="notice-text">💡 *Note: Please provide a link to your file (e.g. Google Drive or Dropbox link) directly inside the description field above, or attach the file to the email draft that opens when you submit.*</p>
-                </div>
-                <button type="submit" class="btn btn-submit">Submit Design Blueprint Request</button>
             </form>
         </div>
     </section>
@@ -604,17 +604,17 @@
         </div>
     </section>
 
-    <!-- 5. Artisanal Beef Jerky Section (Warm Brown Theme) -->
+    <!-- 5. Homemade Artisanal Beef Jerky Section (Warm Brown Theme) -->
     <section id="jerky" class="section section-jerky">
         <div class="container">
-            <h2>Small-Batch Custom Beef Jerky</h2>
-            <p class="section-subtitle">Premium cut, hand-sliced beef jerky marinaded and dried to perfect texture. Shipped directly to you in air-sealed, heavy-duty Ziploc bags to preserve maximum freshness.</p>
+            <h2>Small-Batch Homemade Beef Jerky</h2>
+            <p class="section-subtitle">Premium cut, hand-sliced homemade beef jerky marinated and dried to perfect texture. Shipped directly to you in air-sealed, heavy-duty Ziploc bags to preserve maximum freshness.</p>
             
             <!-- 2 Picture Frames Placement -->
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <div class="photo-frame"><span>[ Drop Artisan Cuts Photo ]</span></div>
-                    <h4>Artisanal Cuts</h4>
+                    <div class="photo-frame"><span>[ Drop Homemade Artisan Cuts Photo ]</span></div>
+                    <h4>Homemade Artisan Cuts</h4>
                 </div>
                 <div class="portfolio-item">
                     <div class="photo-frame"><span>[ Drop Packaged Jerky Photo ]</span></div>
@@ -659,7 +659,7 @@
                     <textarea id="jerk-notes" rows="2" placeholder="Any specific delivery instructions or shipping preferences..."></textarea>
                 </div>
                 
-                <button type="submit" class="btn btn-submit">Place Custom Jerky Request</button>
+                <button type="submit" class="btn btn-submit">Place Custom Homemade Jerky Request</button>
             </form>
         </div>
     </section>
@@ -734,8 +734,8 @@
                 const qty = document.getElementById('jerk-quantity').value;
                 const notes = document.getElementById('jerk-notes').value;
 
-                subject = `Connor's Emporium: Custom Jerky Order - ${name}`;
-                body = `New Jerky Order Sheet:\n\n` +
+                subject = `Connor's Emporium: Custom Homemade Jerky Order - ${name}`;
+                body = `New Homemade Jerky Order Sheet:\n\n` +
                        `Name: ${name}\n` +
                        `Size Select: ${size}\n` +
                        `Flavor Select: ${flavor}\n` +
