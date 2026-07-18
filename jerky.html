@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small-Batch Beef Jerky | Connors Emporium</title>
+    <meta name="description" content="Small-batch, hand-sliced homemade beef jerky, marinated and air-sealed for freshness, shipped to your door.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">Connors Emporium</a>
+        <nav>
+            <a href="index.html" class="back-link">&larr; All Services</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="eyebrow">Small-Batch Jerky</span>
+            <h1>Small-Batch Homemade Beef Jerky</h1>
+            <p>Premium cut, hand-sliced beef jerky marinated and dried to perfect texture. Shipped directly to you in air-sealed, heavy-duty Ziploc bags to preserve maximum freshness.</p>
+        </div>
+    </section>
+
+    <section id="jerky" class="section section-jerky">
+        <div class="container">
+
+            <div class="about-block">
+                <strong>About the jerky:</strong>
+                I've been making this jerky at home for 5 years, and it's become the
+                thing everyone asks me to bring. Because it's homemade, it skips the
+                preservatives and heavy processing you get in store-bought bags — it's
+                healthier, fresher, and costs less than what you'd pay at the store.
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="photo-placeholder"><span>[ Homemade Artisan Cuts Photo ]</span></div>
+                    <h4>Homemade Artisan Cuts</h4>
+                </div>
+                <div class="portfolio-item">
+                    <div class="photo-placeholder"><span>[ Packaged Jerky Photo ]</span></div>
+                    <h4>Freshly Air-Sealed</h4>
+                </div>
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card">[Add a customer quote here]</div>
+                <div class="testimonial-card">[Add a repeat-customer or word-of-mouth note here]</div>
+            </div>
+
+            <div class="pricing-box">
+                <h3>Pricing</h3>
+                <div class="pricing-row"><span>12 oz Fresh-Seal Bag</span><span class="price">[$ ]</span></div>
+                <div class="pricing-row"><span>24 oz Fresh-Seal Bag</span><span class="price">[$ ]</span></div>
+                <div class="pricing-row"><span>Rotating Custom Flavor</span><span class="price">Market price</span></div>
+                <p class="pricing-note">Still need actual bag prices here — worth pricing a bit below store-bought like you mentioned, since that's a real selling point. Add shipping cost/timeframe too.</p>
+            </div>
+
+            <form class="order-form" id="jerky-form">
+                <div class="form-group">
+                    <label for="jerk-name">Full Name</label>
+                    <input type="text" id="jerk-name" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="jerk-size">Bag Size Choice</label>
+                        <select id="jerk-size" required>
+                            <option value="">Select Package Size</option>
+                            <option value="12 oz Bag">12 oz Fresh-Seal Bag</option>
+                            <option value="24 oz Bag">24 oz Fresh-Seal Bag</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jerk-flavor">Flavor Profile</label>
+                        <select id="jerk-flavor" required>
+                            <option value="">Select Flavor</option>
+                            <option value="Regular Original">Regular Original Savory</option>
+                            <option value="Sweet n Spicy">Sweet n Spicy Signature</option>
+                            <option value="Rotating Custom Flavor (Market Price)">Rotating Custom Flavor (Market Price)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="jerk-quantity">Quantity (Number of Bags)</label>
+                    <input type="number" id="jerk-quantity" min="1" value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="jerk-notes">Special Instructions / Custom Adjustments</label>
+                    <textarea id="jerk-notes" rows="2" placeholder="Any specific delivery instructions or preferences..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-submit">Place Custom Jerky Request</button>
+                <p class="form-status" id="jerky-status"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Connors Emporium. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">All Services</a>
+            <a href="mailto:cdawg4252@gmail.com">cdawg4252@gmail.com</a>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">&uarr;</a>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('jerky-form').addEventListener('submit', function (event) {
+            const fields = [
+                { label: "Name", value: document.getElementById('jerk-name').value },
+                { label: "Size Select", value: document.getElementById('jerk-size').value },
+                { label: "Flavor Select", value: document.getElementById('jerk-flavor').value },
+                { label: "Quantity", value: document.getElementById('jerk-quantity').value },
+                { label: "Customization Notes", value: document.getElementById('jerk-notes').value },
+            ];
+            sendEmail(event, "Custom Jerky Order", fields, "jerky-status");
+        });
+    </script>
+</body>
+</html>

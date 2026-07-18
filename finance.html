@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgeting & Wealth Planning | Connors Emporium</title>
+    <meta name="description" content="1-on-1 budgeting consultations and a personalized tracking spreadsheet to help you save, pay down debt, or start investing.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">Connors Emporium</a>
+        <nav>
+            <a href="index.html" class="back-link">&larr; All Services</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="eyebrow">Budgeting & Planning</span>
+            <h1>1-on-1 Personal Budgeting & Wealth Planning</h1>
+            <p>Take command of your financial future with customized 1-on-1 sessions and a personalized tracking spreadsheet.</p>
+        </div>
+    </section>
+
+    <section id="finance" class="section section-finance">
+        <div class="container">
+
+            <div class="about-block">
+                <strong>About this service:</strong>
+                This is budgeting and simple investing guidance built from 2 years of
+                hands-on personal experience — managing my own budget and getting started
+                with straightforward, low-complexity investing. It's practical,
+                real-world strategy rather than licensed financial advisory, and it's
+                aimed at people who want a clear, working system rather than
+                jargon-heavy theory.
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card">[Add a client testimonial here]</div>
+                <div class="testimonial-card">[Add a results summary, e.g. "helped X people build their first budget"]</div>
+            </div>
+
+            <div class="pricing-box">
+                <h3>Packages</h3>
+                <div class="pricing-row"><span>Single consultation + spreadsheet template</span><span class="price">[$ ]</span></div>
+                <div class="pricing-row"><span>Full consultation (budget + debt + investing basics)</span><span class="price">[$ ]</span></div>
+                <p class="pricing-note">Still need your actual rates here — you didn't send numbers for this one yet.</p>
+            </div>
+
+            <form class="order-form" id="finance-form">
+                <div class="form-group">
+                    <label for="fin-name">Full Name</label>
+                    <input type="text" id="fin-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="fin-focus">Primary Financial Objective</label>
+                    <select id="fin-focus" required>
+                        <option value="">Select main objective</option>
+                        <option value="Budgeting & Expense Tracking">Building a Functional Budget & Expense Tracking</option>
+                        <option value="Debt Paydown Strategy">Aggressive Debt Paydown Strategy</option>
+                        <option value="Long-term Investing Setup">Long-term Investment & Portfolio Allocation Foundations</option>
+                        <option value="Comprehensive Consultation">All of the above (Full Consultation)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fin-details">Current Situation Summary</label>
+                    <textarea id="fin-details" rows="4" placeholder="Briefly detail what you hope to get out of our sessions..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-submit">Book Financial Consultation</button>
+                <p class="form-status" id="finance-status"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Connors Emporium. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">All Services</a>
+            <a href="mailto:cdawg4252@gmail.com">cdawg4252@gmail.com</a>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">&uarr;</a>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('finance-form').addEventListener('submit', function (event) {
+            const fields = [
+                { label: "Name", value: document.getElementById('fin-name').value },
+                { label: "Focus Objective", value: document.getElementById('fin-focus').value },
+                { label: "Situation Details", value: document.getElementById('fin-details').value },
+            ];
+            sendEmail(event, "Budget Consultation Request", fields, "finance-status");
+        });
+    </script>
+</body>
+</html>

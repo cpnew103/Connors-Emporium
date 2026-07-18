@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom 3D Printing & Design | Connors Emporium</title>
+    <meta name="description" content="Custom 3D printing and design engineering — from CAD file to finished prototype or functional part.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">Connors Emporium</a>
+        <nav>
+            <a href="index.html" class="back-link">&larr; All Services</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="eyebrow">3D Printing & Design</span>
+            <h1>Custom 3D Printing & Design Engineering</h1>
+            <p>From industrial prototyping to functional custom solutions, bring your ideas to life with high-accuracy geometric printing.</p>
+            <div class="credentials-row">
+                <span class="credential-pill">SolidWorks</span>
+                <span class="credential-pill">Fusion 360</span>
+                <span class="credential-pill">TinkerCAD</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="printing" class="section section-printing">
+        <div class="container">
+
+            <div class="about-block">
+                <strong>About this service:</strong>
+                I've been 3D printing since high school and have taken multiple 2D and
+                3D design courses in both high school and college. Between coursework
+                and personal projects, I've got a wide range of completed prints to show
+                for it — functional parts, brackets, and prototypes — with photos going
+                up here soon.
+            </div>
+
+            <h3 class="showcase-title">Previous Project Showcase</h3>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="photo-placeholder"><span>[ Print Example 1 Photo ]</span></div>
+                    <h4>Functional Mechanisms</h4>
+                </div>
+                <div class="portfolio-item">
+                    <div class="photo-placeholder"><span>[ Print Example 2 Photo ]</span></div>
+                    <h4>Custom Brackets & Racks</h4>
+                </div>
+                <div class="portfolio-item">
+                    <div class="photo-placeholder"><span>[ Print Example 3 Photo ]</span></div>
+                    <h4>Prototyping & Enclosures</h4>
+                </div>
+            </div>
+
+            <div class="pricing-box">
+                <h3>Pricing guide</h3>
+                <div class="pricing-row"><span>Small print, existing file (under 1hr)</span><span class="price">[$ ]</span></div>
+                <div class="pricing-row"><span>Large / multi-part print</span><span class="price">[$ ]</span></div>
+                <div class="pricing-row"><span>Custom design from scratch (per hour)</span><span class="price">[$ ]</span></div>
+                <p class="pricing-note">Still need your actual rates here — even a rough "starting at $X" number keeps people from bouncing before they submit a request.</p>
+            </div>
+
+            <form class="order-form" id="printing-form">
+                <div class="form-group">
+                    <label for="print-name">Full Name</label>
+                    <input type="text" id="print-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="print-desc">Design & Creation Specifications</label>
+                    <textarea id="print-desc" rows="4" placeholder="Describe the object you want designed or created. Include estimated dimensions and practical use case..." required></textarea>
+                </div>
+                <div class="form-group file-notice-box">
+                    <label>Do you have an existing design file (.STL or .OBJ)?</label>
+                    <p class="notice-text">💡 *Note: Because this goes directly to email, please specify a link to your file (e.g., Google Drive / Dropbox link) in the description text field above, or attach the file directly to the email draft that opens when you click submit.*</p>
+                </div>
+                <button type="submit" class="btn btn-submit">Submit Design Blueprint Request</button>
+                <p class="form-status" id="printing-status"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Connors Emporium. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">All Services</a>
+            <a href="mailto:cdawg4252@gmail.com">cdawg4252@gmail.com</a>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">&uarr;</a>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('printing-form').addEventListener('submit', function (event) {
+            const fields = [
+                { label: "Name", value: document.getElementById('print-name').value },
+                { label: "Design Specifications", value: document.getElementById('print-desc').value },
+            ];
+            sendEmail(event, "Custom 3D Print Quote", fields, "printing-status");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Lacrosse Training | Connors Emporium</title>
+    <meta name="description" content="1-on-1 lacrosse skill training — shooting mechanics, footwork, and offensive positioning, taught by a 2x Offensive MVP.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">Connors Emporium</a>
+        <nav>
+            <a href="index.html" class="back-link">&larr; All Services</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="eyebrow">Lacrosse Training</span>
+            <h1>1-on-1 Elite Lacrosse Skill Training</h1>
+            <p>Elevate your game with custom mechanics, footwork training, and high-IQ positioning built specifically for offensive and modern players.</p>
+            <div class="credentials-row">
+                <span class="credential-pill">2x Offensive MVP</span>
+                <span class="credential-pill">NCLL Player of the Week (multiple)</span>
+                <span class="credential-pill">6 years competitive play</span>
+                <span class="credential-pill">3 years coaching 1-on-1</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="lacrosse" class="section section-lacrosse">
+        <div class="container">
+
+            <div class="about-block">
+                <strong>About the training:</strong>
+                I've played competitive lacrosse for 6 years, earning Offensive MVP twice
+                and NCLL Player of the Week honors multiple times. For the last 3 years
+                I've put that experience into 1-on-1 coaching — breaking down shooting
+                mechanics, footwork, and offensive positioning so players can see results
+                fast, not just run drills.
+            </div>
+
+            <h3 class="showcase-title">Training Focus Areas</h3>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="photo-placeholder"><span>[ Lacrosse In-Action Photo 1 ]</span></div>
+                    <h4>Shooting & Stick Mechanics</h4>
+                </div>
+                <div class="portfolio-item">
+                    <div class="photo-placeholder"><span>[ Lacrosse In-Action Photo 2 ]</span></div>
+                    <h4>Offensive & Transition Play</h4>
+                </div>
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card">[Add a testimonial from a player or parent here]</div>
+                <div class="testimonial-card">[Add a specific result — e.g. "helped X make varsity" or a stat improvement]</div>
+            </div>
+
+            <div class="pricing-box">
+                <h3>Session Rates</h3>
+                <div class="pricing-row"><span>1-Hour Personal Skill Session</span><span class="price">[$ ]</span></div>
+                <div class="pricing-row"><span>Multi-Session Schedule Bundle</span><span class="price">[$ ]</span></div>
+                <p class="pricing-note">Fill in your actual rates here.</p>
+            </div>
+
+            <form class="order-form" id="lacrosse-form">
+                <div class="form-group">
+                    <label for="lax-name">Full Name</label>
+                    <input type="text" id="lax-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="lax-position">Primary Position Focus</label>
+                    <select id="lax-position" required>
+                        <option value="">Select Position Group</option>
+                        <option value="Offensive Midfield Focus">Offensive Midfield Focus</option>
+                        <option value="LSM (Long Stick Midfield)">LSM (Long Stick Midfield)</option>
+                        <option value="Attack Training">Attack Training</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="lax-package">Session Booking Package</label>
+                    <select id="lax-package" required>
+                        <option value="">Select Package</option>
+                        <option value="1-Hour Personal Skill Session">1-Hour Personal Skill Session</option>
+                        <option value="Multi-Session Schedule Bundle">Multi-Session Schedule Bundle</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="lax-goals">Current Playing Experience & Goals</label>
+                    <textarea id="lax-goals" rows="4" placeholder="Tell me about your current level, position, and what you want to improve..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-submit">Request Elite Lacrosse Consultation</button>
+                <p class="form-status" id="lacrosse-status"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Connors Emporium. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">All Services</a>
+            <a href="mailto:cdawg4252@gmail.com">cdawg4252@gmail.com</a>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">&uarr;</a>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('lacrosse-form').addEventListener('submit', function (event) {
+            const fields = [
+                { label: "Name", value: document.getElementById('lax-name').value },
+                { label: "Position Focus", value: document.getElementById('lax-position').value },
+                { label: "Session Package", value: document.getElementById('lax-package').value },
+                { label: "Experience & Goals", value: document.getElementById('lax-goals').value },
+            ];
+            sendEmail(event, "Elite Lacrosse Consultation Request", fields, "lacrosse-status");
+        });
+    </script>
+</body>
+</html>

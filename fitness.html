@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Coaching & Diet Plans | Connors Emporium</title>
+    <meta name="description" content="Data-driven weightlifting coaching and macro-based diet plans, personalized to your goals and schedule.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">Connors Emporium</a>
+        <nav>
+            <a href="index.html" class="back-link">&larr; All Services</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="eyebrow">Fitness Coaching</span>
+            <h1>Weightlifting Coaching & Custom Diet Plans</h1>
+            <p>Take control of your physique with a data-driven training regimen and macro optimization strategy built entirely around your lifestyle.</p>
+            <div class="credentials-row">
+                <span class="credential-pill">3 years training & meal planning</span>
+                <span class="credential-pill">2x Lacrosse Offensive MVP</span>
+                <span class="credential-pill">NCLL Player of the Week</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="fitness" class="section section-fitness">
+        <div class="container">
+
+            <div class="about-block">
+                <strong>About this coaching:</strong>
+                I've spent the last 3 years building personalized training and
+                meal-planning programs, for myself and for others. My own athletic
+                background includes 6 years of competitive lacrosse, 2 Offensive MVP
+                awards, and multiple NCLL Player of the Week honors — I bring that same
+                structured, results-focused approach to every program I build. (Also
+                training players directly? Check out
+                <a href="lacrosse.html" style="color:#ee2222;">lacrosse coaching</a>.)
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card">[Add a client testimonial here]</div>
+                <div class="testimonial-card">[Add a before/after or results summary here]</div>
+            </div>
+
+            <div class="pricing-box">
+                <h3>Packages</h3>
+                <div class="pricing-row"><span>Initial intake + custom plan</span><span class="price">[$ ]</span></div>
+                <div class="pricing-row"><span>Monthly check-ins & adjustments</span><span class="price">$5/mo *</span></div>
+                <div class="pricing-row"><span>Diet plan only</span><span class="price">[$ ]</span></div>
+                <p class="pricing-note">* Double-check this — $5/mo seemed low, confirm it's not meant to be $50/mo before this goes live. Also still need the intake and diet-plan-only rates.</p>
+            </div>
+
+            <form class="order-form" id="fitness-form">
+                <div class="form-group">
+                    <label for="fit-name">Full Name</label>
+                    <input type="text" id="fit-name" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fit-height">Height</label>
+                        <input type="text" id="fit-height" placeholder="e.g., 6'0&quot;" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fit-weight">Current Weight (lbs)</label>
+                        <input type="number" id="fit-weight" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="fit-goals">Fitness & Physique Goals</label>
+                    <textarea id="fit-goals" rows="3" placeholder="Tell me what you want to achieve (e.g., strength, fat loss, muscle gain)..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="fit-activity">Daily Activity Level / Job Type</label>
+                    <select id="fit-activity" required>
+                        <option value="">Select activity level</option>
+                        <option value="Sedentary">Sedentary (Desk job)</option>
+                        <option value="Lightly Active">Lightly Active (Light exercise/walking)</option>
+                        <option value="Moderately Active">Moderately Active (Dynamic work / regular training)</option>
+                        <option value="Very Active">Very Active (Heavy physical labor / intense training)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fit-injuries">Injuries or Dietary Restrictions (Optional)</label>
+                    <textarea id="fit-injuries" rows="2" placeholder="List any physical limitations or foods to avoid..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-submit">Request Intake Consultation</button>
+                <p class="form-status" id="fitness-status"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Connors Emporium. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">All Services</a>
+            <a href="mailto:cdawg4252@gmail.com">cdawg4252@gmail.com</a>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">&uarr;</a>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('fitness-form').addEventListener('submit', function (event) {
+            const fields = [
+                { label: "Name", value: document.getElementById('fit-name').value },
+                { label: "Height", value: document.getElementById('fit-height').value },
+                { label: "Weight (lbs)", value: document.getElementById('fit-weight').value },
+                { label: "Activity Level", value: document.getElementById('fit-activity').value },
+                { label: "Goals", value: document.getElementById('fit-goals').value },
+                { label: "Injuries/Dietary Notes", value: document.getElementById('fit-injuries').value },
+            ];
+            sendEmail(event, "Fitness Consulting Request", fields, "fitness-status");
+        });
+    </script>
+</body>
+</html>
