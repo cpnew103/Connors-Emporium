@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Coding & Automation | Connors Emporium</title>
+    <meta name="description" content="Custom scripts, websites, and automation tools built to solve a specific problem.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">Connors Emporium</a>
+        <nav>
+            <a href="index.html" class="back-link">&larr; All Services</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="eyebrow">Coding & Automation</span>
+            <h1>Custom Coding & Automation</h1>
+            <p>[Add a one-line pitch — e.g. "Scripts, websites, and small tools built to solve one specific problem, without the overhead of a full dev agency."]</p>
+            <div class="credentials-row">
+                <span class="credential-pill">[Add a language/stack, e.g. Python]</span>
+                <span class="credential-pill">[Add another, e.g. JavaScript / HTML-CSS]</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="coding" class="section section-coding">
+        <div class="container">
+
+            <div class="about-block">
+                <strong>About this service:</strong>
+                [Add 2–3 sentences on your coding background — coursework, personal
+                projects, or work experience, and what kinds of problems you like
+                solving (e.g. automating a repetitive task, building a simple website,
+                cleaning up messy data).]
+            </div>
+
+            <h3 class="showcase-title">What I Can Help With</h3>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="photo-placeholder"><span>[ Project Example 1 ]</span></div>
+                    <h4>[Category, e.g. Websites & Landing Pages]</h4>
+                </div>
+                <div class="portfolio-item">
+                    <div class="photo-placeholder"><span>[ Project Example 2 ]</span></div>
+                    <h4>[Category, e.g. Scripts & Automation]</h4>
+                </div>
+                <div class="portfolio-item">
+                    <div class="photo-placeholder"><span>[ Project Example 3 ]</span></div>
+                    <h4>[Category, e.g. Data Cleanup & Spreadsheet Tools]</h4>
+                </div>
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card">[Add a client testimonial here]</div>
+                <div class="testimonial-card">[Add a project result or outcome here]</div>
+            </div>
+
+            <div class="pricing-box">
+                <h3>Pricing</h3>
+                <div class="pricing-row"><span>Small script / automation task</span><span class="price">[$ ]</span></div>
+                <div class="pricing-row"><span>Simple website (single page)</span><span class="price">[$ ]</span></div>
+                <div class="pricing-row"><span>Larger custom project (per hour)</span><span class="price">[$ ]</span></div>
+                <p class="pricing-note">Fill in your actual rates here.</p>
+            </div>
+
+            <form class="order-form" id="coding-form">
+                <div class="form-group">
+                    <label for="code-name">Full Name</label>
+                    <input type="text" id="code-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="code-type">Project Type</label>
+                    <select id="code-type" required>
+                        <option value="">Select Project Type</option>
+                        <option value="Script / Automation">Script / Automation</option>
+                        <option value="Website / Web App">Website / Web App</option>
+                        <option value="Data Cleanup / Spreadsheet Tool">Data Cleanup / Spreadsheet Tool</option>
+                        <option value="Other / Not Sure">Other / Not Sure</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="code-desc">Project Description</label>
+                    <textarea id="code-desc" rows="4" placeholder="Describe what you need built or fixed, and what problem it solves..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="code-timeline">Desired Timeline (Optional)</label>
+                    <input type="text" id="code-timeline" placeholder="e.g., within 2 weeks, no rush, etc.">
+                </div>
+                <button type="submit" class="btn btn-submit">Submit Project Request</button>
+                <p class="form-status" id="coding-status"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Connors Emporium. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">All Services</a>
+            <a href="mailto:cdawg4252@gmail.com">cdawg4252@gmail.com</a>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">&uarr;</a>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('coding-form').addEventListener('submit', function (event) {
+            const fields = [
+                { label: "Name", value: document.getElementById('code-name').value },
+                { label: "Project Type", value: document.getElementById('code-type').value },
+                { label: "Project Description", value: document.getElementById('code-desc').value },
+                { label: "Desired Timeline", value: document.getElementById('code-timeline').value },
+            ];
+            sendEmail(event, "Custom Coding Project Request", fields, "coding-status");
+        });
+    </script>
+</body>
+</html>
